@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS bamazonDB;
-CREATE DATABASE bamazonDB;
+CREATE database bamazonDB;
 
 USE bamazonDB;
 
@@ -13,7 +13,7 @@ CREATE TABLE products(
 );
 
 INSERT INTO products(product_name, department_name, price, stock_quantity)
-VALUES ("Nintendo Switch", "Electronics", 299.99, 20),
+VALUES  ("Nintendo Switch", "Electronics", 299.99, 20),
 ("Litter Box", "Animals", 29.99, 15),
 ("Xbox One", "Electronics", 399.99, 35),
 ("Cat Food", "Animals", 12.99, 40),
@@ -23,5 +23,3 @@ VALUES ("Nintendo Switch", "Electronics", 299.99, 20),
 ("Wireless Headphones", "Electronics", 199.99, 24),
 ("Dog food", "Animals", 29.99, 42),
 ("Star Wars", "Movies", 34.99, 14);
-
-SELECT * FROM products

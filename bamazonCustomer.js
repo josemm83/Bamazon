@@ -42,9 +42,9 @@ function purchaseItems(choice, quantity){
         console.log(results);
         if(quantity <= results[0].stock_quantity){
             var total = quantity * results[0].price;
+            connection.query("UPDATE products SET stock_quantity = stock_quantity - ? WHERE product_name = ?",  [quantity, choice]);
             console.log("Product is in stock!")
             console.log("Total for " + results[0].product_name + " is " + total);
-            connection.query("UPDATE products SET stock_quantity = stock_quantity - ? WHERE product_name = ?",  [quantity, choice]);
         }
         else{
             console.log("Insufficient quantity for " + results[0].product_name + 
